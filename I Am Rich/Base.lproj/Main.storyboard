@@ -16,38 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I Am Rich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-0D-pa1">
-                                <rect key="frame" x="110" y="142" width="173" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-qX-7vV">
-                                <rect key="frame" x="60" y="314" width="270" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QL-qq-kP3">
-                                <rect key="frame" x="124" y="672" width="145" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="I Am Poor">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
-                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                    <color key="baseBackgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Okx-w4-Hdv"/>
-                                    <segue destination="4WM-eC-TBI" kind="presentation" modalPresentationStyle="fullScreen" id="ZHZ-VF-HbQ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Bqd-CB-Qpi" userLabel="Stack1">
+                                <rect key="frame" x="16" y="59" width="361" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ps4-Ak-EFc" userLabel="Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="263"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Rich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-0D-pa1">
+                                                <rect key="frame" x="94.333333333333314" y="107.66666666666666" width="172.66666666666669" height="48"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="a0u-0D-pa1" firstAttribute="centerY" secondItem="ps4-Ak-EFc" secondAttribute="centerY" id="GxE-Fy-n4N"/>
+                                            <constraint firstItem="a0u-0D-pa1" firstAttribute="centerX" secondItem="ps4-Ak-EFc" secondAttribute="centerX" id="Vyz-L4-T7r"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIV-GW-djM" userLabel="Middle">
+                                        <rect key="frame" x="0.0" y="265" width="361" height="263"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diamond" translatesAutoresizingMaskIntoConstraints="NO" id="1yg-qX-7vV">
+                                                <rect key="frame" x="9" y="56.666666666666686" width="343.33333333333331" height="150"/>
+                                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="5pt-ov-GT2"/>
+                                                    <constraint firstAttribute="width" constant="343.32999999999998" id="YJ4-oB-fDP"/>
+                                                    <constraint firstAttribute="height" constant="150" id="gKP-nT-Mrr"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1yg-qX-7vV" firstAttribute="centerY" secondItem="WIV-GW-djM" secondAttribute="centerY" id="KxW-J4-31h"/>
+                                            <constraint firstItem="1yg-qX-7vV" firstAttribute="centerY" relation="lessThanOrEqual" secondItem="WIV-GW-djM" secondAttribute="centerY" id="LZN-Yu-9Ld"/>
+                                            <constraint firstItem="1yg-qX-7vV" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="WIV-GW-djM" secondAttribute="centerX" id="QGO-0e-I0K"/>
+                                            <constraint firstItem="1yg-qX-7vV" firstAttribute="centerX" secondItem="WIV-GW-djM" secondAttribute="centerX" id="shY-AG-sm3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGY-DP-tva" userLabel="Bottom">
+                                        <rect key="frame" x="0.0" y="530" width="361" height="263"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QL-qq-kP3">
+                                                <rect key="frame" x="113" y="109.66666666666663" width="135.33333333333337" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="I Am Poor">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                    <color key="baseBackgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Okx-w4-Hdv"/>
+                                                    <segue destination="4WM-eC-TBI" kind="presentation" modalPresentationStyle="fullScreen" id="ZHZ-VF-HbQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9QL-qq-kP3" firstAttribute="centerX" secondItem="wGY-DP-tva" secondAttribute="centerX" id="98O-O8-YAa"/>
+                                            <constraint firstItem="9QL-qq-kP3" firstAttribute="centerY" secondItem="wGY-DP-tva" secondAttribute="centerY" id="aeB-Gi-ven"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bqd-CB-Qpi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nlt-7r-fNY"/>
+                            <constraint firstItem="Bqd-CB-Qpi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJd-9q-MmF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bqd-CB-Qpi" secondAttribute="trailing" constant="16" id="bel-dp-1YN"/>
+                            <constraint firstAttribute="bottom" secondItem="Bqd-CB-Qpi" secondAttribute="bottom" id="ktr-oI-4jA"/>
+                            <constraint firstItem="Bqd-CB-Qpi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mG0-ev-8rV"/>
+                            <constraint firstItem="Bqd-CB-Qpi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rhH-b6-3yj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,38 +106,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBt-pm-uWx">
-                                <rect key="frame" x="130" y="668" width="133" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="I Am Rich">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
-                                    <color key="baseForegroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="sBC-Tn-ImB"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coal" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-IM-Z6Z">
-                                <rect key="frame" x="64" y="314" width="270" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I Am Poor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-MU-6Vn">
-                                <rect key="frame" x="111" y="140" width="177" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4fQ-24-8Yo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8R-qq-tMU" userLabel="Top">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="128.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Am Poor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-MU-6Vn">
+                                                <rect key="frame" x="108.33333333333331" y="40" width="176.66666666666669" height="48"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7bC-MU-6Vn" firstAttribute="centerY" secondItem="y8R-qq-tMU" secondAttribute="centerY" id="4il-tI-GSg"/>
+                                            <constraint firstItem="7bC-MU-6Vn" firstAttribute="centerX" secondItem="y8R-qq-tMU" secondAttribute="centerX" id="bQX-mv-ARG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ex-8z-1eF" userLabel="Middle">
+                                        <rect key="frame" x="0.0" y="136.33333333333337" width="393" height="440.00000000000011"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coal" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-IM-Z6Z">
+                                                <rect key="frame" x="121" y="155.99999999999997" width="151" height="128.00000000000003"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nkb-IM-Z6Z" firstAttribute="centerX" secondItem="3Ex-8z-1eF" secondAttribute="centerX" id="3ix-PZ-ESk"/>
+                                            <constraint firstItem="nkb-IM-Z6Z" firstAttribute="centerY" secondItem="3Ex-8z-1eF" secondAttribute="centerY" id="Kaw-An-mVh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="of1-mt-6gf" userLabel="Bottom">
+                                        <rect key="frame" x="0.0" y="584.33333333333337" width="393" height="174.66666666666663"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBt-pm-uWx">
+                                                <rect key="frame" x="130.33333333333337" y="65.333333333333258" width="132.66666666666663" height="44"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="I Am Rich">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="baseForegroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="sBC-Tn-ImB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TBt-pm-uWx" firstAttribute="centerX" secondItem="of1-mt-6gf" secondAttribute="centerX" id="VJn-vF-6C8"/>
+                                            <constraint firstItem="TBt-pm-uWx" firstAttribute="centerY" secondItem="of1-mt-6gf" secondAttribute="centerY" id="vHq-l9-865"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ST-Ab-Kaw"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="top" secondItem="6ST-Ab-Kaw" secondAttribute="top" id="C5e-Oc-FH6"/>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="centerY" secondItem="BfY-C1-Sak" secondAttribute="centerY" id="IE2-9H-71B"/>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="leading" secondItem="6ST-Ab-Kaw" secondAttribute="leading" id="M2X-Y3-9dC"/>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="centerX" secondItem="BfY-C1-Sak" secondAttribute="centerX" id="QBn-8l-m7h"/>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="trailing" secondItem="6ST-Ab-Kaw" secondAttribute="trailing" id="c34-yn-Jyj"/>
+                            <constraint firstItem="4fQ-24-8Yo" firstAttribute="bottom" secondItem="6ST-Ab-Kaw" secondAttribute="bottom" id="jMd-dg-Vuw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11V-z7-sQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="-35"/>
+            <point key="canvasLocation" x="904.58015267175574" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
